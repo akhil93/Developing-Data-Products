@@ -25,7 +25,7 @@ shinyServer(function(input, output) {
       {"Select a predictor"}
     else{
       fit<-lm(as.formula(modelText()),data=mtcars)
-      c<-input$cyl
+      c<-input$cr
       h<-input$hp
       df<-data.frame(cyl=c,hp=h)
       predict(fit,df) }
