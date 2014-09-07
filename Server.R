@@ -12,7 +12,7 @@ shinyServer(function(input, output) {
       {paste(input$checkbox[1],"+",input$checkbox[2])}
   })
   
-  modelText <- reactive(paste("mpg ~", Text()))
+  modelText <- reactive(paste("mpg~", Text()))
   output$predictors <-renderText({Text()})
   output$model <- renderText({
     if (length(input$checkbox)==0)
